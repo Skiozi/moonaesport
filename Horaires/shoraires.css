@@ -1,0 +1,1102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background:#fff;
+  font-size: 22px;
+  line-height: 32px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word !important;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+}
+
+/* ------------------ Header ------------------ */
+
+  /* ------------------ Header ------------------ */
+  
+  a {
+    color: #FFF;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  .toggle,
+  [id^=drop] {
+    display: none;
+  }
+  
+  nav {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    border-bottom: 3px solid #0c9bdd;
+    height: 100px;
+  }
+  
+  #logo {
+    width: 240px;
+    height: auto;
+    position: relative;
+    left: 20px;
+  }
+  
+  #logoa {
+    width: 240px;
+    height: auto;
+    padding: 0;
+  }
+  
+  #logo-footer {
+    width: 240px;
+    height: auto;
+    position: relative;
+    left: 50px;
+  }
+  
+  
+  #main-toggle {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    top: -91px;
+    user-select: none;
+  }
+  
+  .nav-icon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;  /* Largeur bouton burger*/
+  }
+  
+  .nav-icon:before,
+  .nav-icon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .nav-icon:before {
+    top: 15px;    /* Hauteur bouton burger*/
+  }
+  
+  .nav-icon:after {
+    top: -15px;   /* Hauteur bouton burger*/
+  }
+  
+  nav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    top: -15px;
+    z-index: 1;
+    width: 100%;  
+  }
+  
+  nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    background-color: #000000;
+    position: relative;
+    top: -72px;                 /* A MODIFIER TEST */
+    left: -320px;                /* A MODIFIER TEST */
+  }
+  
+  nav a {
+    display: block;
+    padding: 0 20px;
+    color: #FFF;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  
+  
+  nav a:hover {
+    color: #0c9bdd;
+  }
+  
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+  }
+  
+  nav ul li:hover>ul {
+    display: inherit;
+  }
+  
+  nav ul ul li {
+    width: 220px;   /* A MODIFIER TEST */
+    float: none;
+    display: list-item;
+    position: relative;
+    top: 0;  /* A MODIFIER TEST */
+    left: 0;  /* A MODIFIER TEST */
+  }
+  
+  nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+  }
+  
+  li>a:only-child:after {
+    content: '';
+  }
+  
+  .fas, .fa-caret-down {
+    font-size: 14px;
+    padding-left: 3px;
+  }
+  
+  /* ------------------ Header Responsive ------------------ */
+  
+  @media all and (max-width : 320px) {
+  
+    #logo {
+      width: 170px;
+      height: auto;
+      position: relative;
+      top: 12px;
+    }
+  
+    .toggle+a,
+    .menu {
+      display: none;
+    }
+  
+    .toggle {
+      display: block;
+      padding: 0 20px;
+      color: #FFF;
+      font-size: 20px;
+      line-height: 60px;
+      text-decoration: none;
+      border: none;
+    }
+  
+  .toggle:hover {
+      color: #0c9bdd;
+    }
+  
+    #main-toggle {
+      top: -64px;     /*Position X Bouton burger*/
+    }
+
+    [id^=drop]:checked+ul {
+      display: block;
+    }
+  
+    nav ul li {
+      display: block;
+      width: 100%;
+      position: relative;
+      top: -24px;   /*Posiition X menu burger*/
+      left: 0;
+    }
+  
+    nav ul ul {
+      float: none;
+      position: static;
+      color: #ffffff;
+      border-top: 3px solid #0c9bdd;
+      border-bottom: 3px solid #0c9bdd;
+    }
+  
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+      display: none;
+    }
+
+    }
+
+    @media all and (max-width : 640px) {
+  
+      #logo {
+        width: 200px;
+        height: auto;
+        position: relative;
+        top: 9px;
+      }
+    
+      .toggle+a,
+      .menu {
+        display: none;
+      }
+    
+      .toggle {
+        display: block;
+        padding: 0 20px;
+        color: #FFF;
+        font-size: 20px;
+        line-height: 60px;
+        text-decoration: none;
+        border: none;
+      }
+    
+    .toggle:hover {
+        color: #0c9bdd;
+      }
+    
+      #main-toggle {
+        top: -73px;     /*Position X Bouton burger*/
+      }
+  
+      [id^=drop]:checked+ul {
+        display: block;
+      }
+    
+      nav ul li {
+        display: block;
+        width: 100%;
+        position: relative;
+        top: -35px;   /*Posiition X menu burger*/
+        left: 0;
+      }
+    
+      nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        border-top: 3px solid #0c9bdd;
+        border-bottom: 3px solid #0c9bdd;
+      }
+    
+      nav ul ul li:hover>ul,
+      nav ul li:hover>ul {
+        display: none;
+      }
+  
+      }
+
+      @media all and (max-width : 1024px) {
+  
+        #logo {
+          width: 200px;
+          height: auto;
+          position: relative;
+          top: 9px;
+        }
+      
+        .toggle+a,
+        .menu {
+          display: none;
+        }
+      
+        .toggle {
+          display: block;
+          padding: 0 20px;
+          color: #FFF;
+          font-size: 20px;
+          line-height: 60px;
+          text-decoration: none;
+          border: none;
+        }
+      
+      .toggle:hover {
+          color: #0c9bdd;
+        }
+      
+        #main-toggle {
+          top: -73px;     /*Position X Bouton burger*/
+        }
+    
+        [id^=drop]:checked+ul {
+          display: block;
+        }
+      
+        nav ul li {
+          display: block;
+          width: 100%;
+          position: relative;
+          top: -35px;   /*Posiition X menu burger*/
+          left: 0;
+        }
+      
+        nav ul ul {
+          float: none;
+          position: static;
+          color: #ffffff;
+          border-top: 3px solid #0c9bdd;
+          border-bottom: 3px solid #0c9bdd;
+        }
+      
+        nav ul ul li:hover>ul,
+        nav ul li:hover>ul {
+          display: none;
+        }
+    
+        }
+  @media all and (max-width : 640px) {
+  
+          #logo {
+            width: 200px;
+            height: auto;
+            position: relative;
+            top: 9px;
+          }
+        
+          .toggle+a,
+          .menu {
+            display: none;
+          }
+        
+          .toggle {
+            display: block;
+            padding: 0 20px;
+            color: #FFF;
+            font-size: 20px;
+            line-height: 60px;
+            text-decoration: none;
+            border: none;
+          }
+        
+        .toggle:hover {
+            color: #0c9bdd;
+          }
+        
+          #main-toggle {
+            top: -73px;     /*Position X Bouton burger*/
+          }
+      
+          [id^=drop]:checked+ul {
+            display: block;
+          }
+        
+          nav ul li {
+            display: block;
+            width: 100%;
+            position: relative;
+            top: -35px;   /*Posiition X menu burger*/
+            left: 0;
+          }
+        
+          nav ul ul {
+            float: none;
+            position: static;
+            color: #ffffff;
+            border-top: 3px solid #0c9bdd;
+            border-bottom: 3px solid #0c9bdd;
+          }
+        
+          nav ul ul li:hover>ul,
+          nav ul li:hover>ul {
+            display: none;
+          }
+      
+          }
+
+          @media all and (min-width : 1024px) {
+            nav ul li {
+              left: 275px;                /* A MODIFIER TEST */
+            }
+          }
+
+          @media all and (min-width : 1280px) {
+            nav ul li {
+              left: 275px;                /* A MODIFIER TEST */
+            }
+          }
+
+          @media all and (min-width : 1400px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+
+          @media all and (min-width : 1680px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+
+          @media all and (min-width : 1920px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+          @media all and (min-width : 2048px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+          @media all and (min-width : 2560px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+          @media all and (min-width : 3440px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+          @media all and (min-width : 3840px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+          @media all and (min-width : 4096px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+          @media all and (min-width : 7680px) {
+            nav ul li {
+              left: 300px;                /* A MODIFIER TEST */
+            }
+          }
+
+/* ------------------ S1 ------------------ */
+
+.s1 {
+  width: 100%;
+  height: 875px;
+  background-color: #080808;
+  position: relative;
+}
+
+.s1 h1 {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+}
+
+.s1 img {
+  width: 75%;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.s1 h2 {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: auto;
+  top: 88%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ------------------ S1 Responsive ------------------ */
+
+@media all and (min-width : 1910px) {
+  
+  .s1 {
+    width: 100%;
+    height: 1150px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    position: absolute;
+    top: 90%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 1200px) {
+  
+  .s1 {
+    width: 100%;
+    height: 780px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 670px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 950px) {
+  
+  .s1 {
+    width: 100%;
+    height: 680px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 560px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 850px) {
+  
+  .s1 {
+    width: 100%;
+    height: 680px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 520px;
+    font-size: 27px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 680px) {
+  
+  .s1 {
+    width: 100%;
+    height: 580px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 440px;
+    font-size: 27px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 600px) {
+  
+  .s1 {
+    width: 100%;
+    height: 580px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 440px;
+    font-size: 20px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 530px) {
+  
+  .s1 {
+    width: 100%;
+    height: 480px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 360px;
+    font-size: 20px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 478px) {
+  
+  .s1 h1 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    font-size: 27px;
+    top: 40px;
+    left: 50%;
+  }
+
+  .s1 {
+    width: 100%;
+    height: 430px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 330px;
+    font-size: 18px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+@media all and (max-width : 320px) {
+  
+  .s1 h1 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    font-size: 24px;
+    top: 40px;
+    left: 50%;
+    width: 211px;
+  }
+
+  .s1 {
+    width: 100%;
+    height: 410px;
+    background-color: #080808;
+    position: relative;
+  }
+
+  .s1 h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    top: 310px;
+    font-size: 11px;
+    width: 305px;
+    left: 50%;
+    font-weight: normal;
+  }
+
+}
+
+/* ------------------ Footer ------------------ */
+
+footer {
+  background-color: #000000;
+  border-top: 3px solid #0c9bdd;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+#logo-footer {
+  width: 240px;
+  height: auto;
+  position: relative;
+  left: 50px;
+  top: 25px;
+}
+
+footer p {
+  color: #878888;
+  font-size: 17px;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: absolute;
+  top: 150px;
+  left: 2%;
+}
+
+footer h1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.webtv h1 {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+}
+
+.webtv .fh {
+  position: absolute;
+  top: 60px;
+  left: 400px;
+  font-size: 17px;
+}
+
+.webtv .fwtv {
+  position: absolute;
+  top: 90px;
+  left: 400px;
+  font-size: 17px;
+}
+
+.teams h1 {
+  position: absolute;
+  top: 20px;
+  left: 570px;
+  font-size: 17px;
+}
+
+.teams .ff {
+  position: absolute;
+  top: 60px;
+  left: 570px;
+  font-size: 17px;
+}
+
+.teams .fl {
+  position: absolute;
+  top: 90px;
+  left: 570px;
+  font-size: 17px;
+}
+
+.club h1 {
+  position: absolute;
+  top: 20px;
+  left: 800px;
+}
+
+.club .fn {
+  position: absolute;
+  top: 60px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .fsh {
+  position: absolute;
+  top: 90px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .fst {
+  position: absolute;
+  top: 120px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .fap {
+  position: absolute;
+  top: 150px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .frec {
+  position: absolute;
+  top: 180px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.socials h1 {
+  position: absolute;
+  top: 20px;
+  left: 1000px;
+}
+
+.socials .ft {
+  position: absolute;
+  top: 60px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .fd {
+  position: absolute;
+  top: 90px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .fy {
+  position: absolute;
+  top: 120px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .flive {
+  position: absolute;
+  top: 150px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .fi {
+  position: absolute;
+  top: 180px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+
+footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #878888;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #0c9bdd;
+}
+
+.credits a {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  top: 250px;
+  left: 2%;
+}
+
+.credits a:hover {
+  color: #fff;
+}
+
+.credits i {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+/* ------------------ Footer - Responsive ------------------ */
+
+@media all and (max-width : 1280px) {
+
+  #logo-footer {
+    position: absolute;
+    left: 50px;
+  }
+}
+
+@media all and (max-width : 1225px) {
+
+  footer {
+    height: 900px;
+    z-index: 20;
+  }
+
+  #logo-footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .webtv {
+    position: relative;
+  }
+
+  .webtv h1 {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .webtv .fh {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .webtv .fwtv {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .teams {
+    position: relative;
+  }
+
+  .teams h1 {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .teams .ff {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .teams .fl {
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club {
+    position: relative;
+  }
+
+  .club h1 {
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fn {
+    top: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fsh {
+    top: 390px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fst {
+    top: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fap {
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .frec {
+    top: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials {
+    position: relative;
+  }
+
+  .socials h1 {
+    top: 520px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .ft {
+    top: 560px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .fd {
+    top: 590px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .fy {
+    top: 620px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .flive {
+    top: 650px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .fi {
+    top: 680px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  footer p {
+    top: 750px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .credits a {
+    top: 845px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+@media all and (max-width : 550px) {
+  footer {
+    height: 1000px;
+  }
+  footer p {
+    width: 210px;
+    left: 55%;
+  }
+  .credits a {
+    top: 910px;
+  }
+}

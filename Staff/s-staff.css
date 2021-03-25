@@ -1,0 +1,3399 @@
+* {
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+  
+  body {
+    background:#fff;
+    font-size: 22px;
+    line-height: 32px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word !important;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+  }
+  
+    
+    /* ------------------ Header ------------------ */
+    
+    a {
+      color: #FFF;
+    }
+      
+    p {
+      text-align: center;
+    }
+      
+    .toggle, [id^=drop] {
+        display: none;
+    }
+      
+    nav {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      border-bottom: 3px solid #0c9bdd;
+      height: 100px;
+    }
+      
+    #logo {
+      width: 240px;
+      height: auto;
+      position: relative;
+      left: 20px;
+    }
+      
+    #logoa {
+      width: 240px;
+      height: auto;
+      padding: 0;
+    }
+      
+    #logo-footer {
+      width: 240px;
+      height: auto;
+      position: relative;
+      left: 50px;
+    }
+      
+      
+    #main-toggle {
+      cursor: pointer;
+      float: right;
+      padding: 28px 20px;
+      position: relative;
+      top: -91px;
+      user-select: none;
+    }
+      
+    .nav-icon {
+      background: #fff;
+      display: block;
+      height: 2px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35px;  /* Largeur bouton burger*/
+    }
+      
+    .nav-icon:before, .nav-icon:after {
+      background: #fff;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+      
+      .nav-icon:before {
+        top: 15px;    /* Hauteur bouton burger*/
+      }
+      
+      .nav-icon:after {
+        top: -15px;   /* Hauteur bouton burger*/
+      }
+      
+      nav:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      nav ul {
+        float: right;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        top: -15px;
+        z-index: 1;
+        width: 100%;  
+      }
+      
+      nav ul li {
+        margin: 0px;
+        display: inline-block;
+        float: left;
+        background-color: #000000;
+        position: relative;
+        top: -72px;                 /* A MODIFIER TEST */
+        left: -320px;                /* A MODIFIER TEST */
+      }
+      
+      nav a {
+        display: block;
+        padding: 0 20px;
+        color: #FFF;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 60px;
+        text-decoration: none;
+      }
+      
+      
+      nav a:hover {
+        color: #0c9bdd;
+      }
+      
+      nav ul ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+      }
+      
+      nav ul li:hover>ul {
+        display: inherit;
+      }
+      
+      nav ul ul li {
+        width: 220px;   /* A MODIFIER TEST */
+        float: none;
+        display: list-item;
+        position: relative;
+        top: 0;  /* A MODIFIER TEST */
+        left: 0;  /* A MODIFIER TEST */
+      }
+      
+      nav ul ul ul li {
+        position: relative;
+        top: -60px;
+        left: 170px;
+      }
+      
+      li>a:only-child:after {
+        content: '';
+      }
+      
+      .fas, .fa-caret-down {
+        font-size: 14px;
+        padding-left: 3px;
+      }
+      
+      /* ------------------ Header Responsive ------------------ */
+      
+      @media all and (max-width : 320px) {
+      
+        #logo {
+          width: 170px;
+          height: auto;
+          position: relative;
+          top: 12px;
+        }
+      
+        .toggle+a,
+        .menu {
+          display: none;
+        }
+      
+        .toggle {
+          display: block;
+          padding: 0 20px;
+          color: #FFF;
+          font-size: 20px;
+          line-height: 60px;
+          text-decoration: none;
+          border: none;
+        }
+      
+      .toggle:hover {
+          color: #0c9bdd;
+        }
+      
+        #main-toggle {
+          top: -64px;     /*Position X Bouton burger*/
+        }
+    
+        [id^=drop]:checked+ul {
+          display: block;
+        }
+      
+        nav ul li {
+          display: block;
+          width: 100%;
+          position: relative;
+          top: -24px;   /*Posiition X menu burger*/
+          left: 0;
+        }
+      
+        nav ul ul {
+          float: none;
+          position: static;
+          color: #ffffff;
+          border-top: 3px solid #0c9bdd;
+          border-bottom: 3px solid #0c9bdd;
+        }
+      
+        nav ul ul li:hover>ul,
+        nav ul li:hover>ul {
+          display: none;
+        }
+    
+        }
+    
+        @media all and (max-width : 640px) {
+      
+          #logo {
+            width: 200px;
+            height: auto;
+            position: relative;
+            top: 9px;
+          }
+        
+          .toggle+a,
+          .menu {
+            display: none;
+          }
+        
+          .toggle {
+            display: block;
+            padding: 0 20px;
+            color: #FFF;
+            font-size: 20px;
+            line-height: 60px;
+            text-decoration: none;
+            border: none;
+          }
+        
+        .toggle:hover {
+            color: #0c9bdd;
+          }
+        
+          #main-toggle {
+            top: -73px;     /*Position X Bouton burger*/
+          }
+      
+          [id^=drop]:checked+ul {
+            display: block;
+          }
+        
+          nav ul li {
+            display: block;
+            width: 100%;
+            position: relative;
+            top: -35px;   /*Posiition X menu burger*/
+            left: 0;
+          }
+        
+          nav ul ul {
+            float: none;
+            position: static;
+            color: #ffffff;
+            border-top: 3px solid #0c9bdd;
+            border-bottom: 3px solid #0c9bdd;
+          }
+        
+          nav ul ul li:hover>ul,
+          nav ul li:hover>ul {
+            display: none;
+          }
+      
+          }
+    
+          @media all and (max-width : 1024px) {
+      
+            #logo {
+              width: 200px;
+              height: auto;
+              position: relative;
+              top: 9px;
+            }
+          
+            .toggle+a,
+            .menu {
+              display: none;
+            }
+          
+            .toggle {
+              display: block;
+              padding: 0 20px;
+              color: #FFF;
+              font-size: 20px;
+              line-height: 60px;
+              text-decoration: none;
+              border: none;
+            }
+          
+          .toggle:hover {
+              color: #0c9bdd;
+            }
+          
+            #main-toggle {
+              top: -73px;     /*Position X Bouton burger*/
+            }
+        
+            [id^=drop]:checked+ul {
+              display: block;
+            }
+          
+            nav ul li {
+              display: block;
+              width: 100%;
+              position: relative;
+              top: -35px;   /*Posiition X menu burger*/
+              left: 0;
+            }
+          
+            nav ul ul {
+              float: none;
+              position: static;
+              color: #ffffff;
+              border-top: 3px solid #0c9bdd;
+              border-bottom: 3px solid #0c9bdd;
+            }
+          
+            nav ul ul li:hover>ul,
+            nav ul li:hover>ul {
+              display: none;
+            }
+        
+            }
+      @media all and (max-width : 640px) {
+      
+              #logo {
+                width: 200px;
+                height: auto;
+                position: relative;
+                top: 9px;
+              }
+            
+              .toggle+a,
+              .menu {
+                display: none;
+              }
+            
+              .toggle {
+                display: block;
+                padding: 0 20px;
+                color: #FFF;
+                font-size: 20px;
+                line-height: 60px;
+                text-decoration: none;
+                border: none;
+              }
+            
+            .toggle:hover {
+                color: #0c9bdd;
+              }
+            
+              #main-toggle {
+                top: -73px;     /*Position X Bouton burger*/
+              }
+          
+              [id^=drop]:checked+ul {
+                display: block;
+              }
+            
+              nav ul li {
+                display: block;
+                width: 100%;
+                position: relative;
+                top: -35px;   /*Posiition X menu burger*/
+                left: 0;
+              }
+            
+              nav ul ul {
+                float: none;
+                position: static;
+                color: #ffffff;
+                border-top: 3px solid #0c9bdd;
+                border-bottom: 3px solid #0c9bdd;
+              }
+            
+              nav ul ul li:hover>ul,
+              nav ul li:hover>ul {
+                display: none;
+              }
+          
+              }
+    
+              @media all and (min-width : 1024px) {
+                nav ul li {
+                  left: 275px;                /* A MODIFIER TEST */
+                }
+              }
+    
+              @media all and (min-width : 1280px) {
+                nav ul li {
+                  left: 275px;                /* A MODIFIER TEST */
+                }
+              }
+    
+              @media all and (min-width : 1400px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+    
+              @media all and (min-width : 1680px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+    
+              @media all and (min-width : 1920px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+              @media all and (min-width : 2048px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+              @media all and (min-width : 2560px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+              @media all and (min-width : 3440px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+              @media all and (min-width : 3840px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+              @media all and (min-width : 4096px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+              @media all and (min-width : 7680px) {
+                nav ul li {
+                  left: 300px;                /* A MODIFIER TEST */
+                }
+              }
+/* ------------------ S1------------------ */
+.s1 {
+    background-color: #080808;
+    width: 100%;
+    height: 4900px;
+    position: relative;
+}
+
+.s1 h1:nth-child(1) {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #0c9bdd;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.s1 h1:nth-child(2) {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #0c9bdd;
+  position: absolute;
+  top: 725px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card1 {
+    position: absolute;
+    top: 375px;      /* Positionnement Y de la carte */
+    left: 25%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card1 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card1 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card1:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card1 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card1:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card1 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 181px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card1 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card1 .details .center h1 .role {
+    font-size: 12px;
+    width: 65px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card1 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card1 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card1 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card1 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card1 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card1 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card1 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card1 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card1 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card1 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card2 {
+    position: absolute;
+    top: 375px;      /* Positionnement Y de la carte */
+    left: 75%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card2 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card2 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card2:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card2 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card2:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card2 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 228px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card2 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card2 .details .center h1 .role {
+    font-size: 12px;
+    width: 96px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card2 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card2 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card2 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card2 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card2 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card2 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card2 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card2 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card2 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card2 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card3 {
+    position: absolute;
+    top: 950px;      /* Positionnement Y de la carte */
+    left: 25%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card3 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card3 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card3:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card3 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card3:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card3 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 151px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card3 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card3 .details .center h1 .role {
+    font-size: 12px;
+    width: 123px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card3 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card3 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card3 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card3 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card3 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card3 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card3 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card3 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card3 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card3 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+
+.card20 {
+  position: absolute;
+  top: 1525px;      /* Positionnement Y de la carte */
+  left: 25%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 360px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+  background-color: #080808 ;
+}
+
+.card20 .image {
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+}
+
+.card20 .image img {
+width: 100%;
+transition: .5s;
+}
+
+.card20:hover .image img {
+opacity: .4;
+transform: translateX(30%);
+}
+
+.card20 .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  border-top: solid 2px #00c4ee;
+  border-bottom: solid 2px #00c4ee;
+  transition: .5s;
+  transform-origin: left;
+  transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card20:hover .details {
+  transform: perspective(2000px) rotateY(0deg);
+}
+.card20 .details .center h1 {
+  margin: 0;
+  padding: 0;
+  width: 197px;  /* à modifier pour centrer texte à chaque fois*/
+  color: #fff;
+  line-height: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}
+
+.card20 .details .center h1 .pseudo {
+  position: absolute;
+  font-size: 22px;
+  color: #00c4ee;
+  transform: translateX(-50%);
+}
+
+.card20 .details .center h1 .role {
+  font-size: 12px;
+  width: 118px;
+  color: rgb(165, 165, 165);
+  position: absolute;
+  left: calc(50%);
+  transform: translateX(-50%);
+}
+
+.card20 .flag {
+  width: 45px;
+  height: 37px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card20 .age {
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card20 .setup {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  list-style: none;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card20 .setup img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.card20 .setup a {
+  color: #fff;
+  text-decoration: none;
+}
+.card20 .setup a:hover {
+  transition: ease-in .2s;
+  color: #0b9bee;
+
+}
+
+.card20 .details .center .s1-socials {
+  margin: 10px auto 0;
+  padding: 0;
+  display: table;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 85%;
+}
+
+.card20 .details .center .s1-socials li {
+  list-style: none;
+  margin: 0 5px;
+  float: left;
+}
+
+.card20 .details .center .s1-socials li a {
+  display: block;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: .5s;
+}
+
+.card20 .details .center .s1-socials li a:hover {
+  color: #0b9bee;
+}
+
+.card4 {
+    position: absolute;
+    top: 950px;      /* Positionnement Y de la carte */
+    left: 75%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card4 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card4 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card4:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card4 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card4:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card4 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 187px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card4 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card4 .details .center h1 .role {
+    font-size: 12px;
+    width: 112px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card4 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card4 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card4 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card4 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card4 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card4 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card4 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card4 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card4 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card4 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card5 {
+    position: absolute;
+    top: 1525px;      /* Positionnement Y de la carte */
+    left: 75%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card5 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card5 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card5:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card5 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card5:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card5 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 151px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card5 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card5 .details .center h1 .role {
+    font-size: 12px;
+    width: 140px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card5 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card5 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card5 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card5 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card5 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card5 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card5 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card5 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card5 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card5 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card6 {
+    position: absolute;
+    top: 2100px;      /* Positionnement Y de la carte */
+    left: 25%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card6 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card6 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card6:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card6 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card6:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card6 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 188px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card6 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card6 .details .center h1 .role {
+    font-size: 12px;
+    width: 121px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card6 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card6 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card6 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card6 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card6 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card6 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card6 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card6 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card6 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card6 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+
+.card10 {
+    position: absolute;
+    top: 2100px;      /* Positionnement Y de la carte */
+    left: 75%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card10 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card10 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card10:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card10 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card10:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card10 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 151px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card10 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card10 .details .center h1 .role {
+    font-size: 12px;
+    width: 140px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card10 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card10 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card10 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card10 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card10 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card10 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card10 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card10 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card10 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card10 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card11 {
+    position: absolute;
+    top: 2675px;      /* Positionnement Y de la carte */
+    left: 25%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card11 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card11 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card11:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card11 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card11:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card11 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 218px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card11 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card11 .details .center h1 .role {
+    font-size: 12px;
+    width: 115px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card11 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card11 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card11 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card11 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card11 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card11 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card11 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card11 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card11 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card11 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+
+.card13 {
+    position: absolute;
+    top: 2675px;      /* Positionnement Y de la carte */
+    left: 75%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card13 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card13 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card13:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card13 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card13:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card13 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 151px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card13 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card13 .details .center h1 .role {
+    font-size: 12px;
+    width: 61px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card13 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card13 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card13 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card13 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card13 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card13 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card13 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card13 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card13 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card13 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card14 {
+    position: absolute;
+    top: 3250px;      /* Positionnement Y de la carte */
+    left: 25%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card14 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card14 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card14:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card14 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card14:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card14 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 186px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card14 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card14 .details .center h1 .role {
+    font-size: 12px;
+    width: 66px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card14 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card14 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card14 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card14 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card14 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card14 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card14 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card14 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card14 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card14 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card15 {
+    position: absolute;
+    top: 3250px;      /* Positionnement Y de la carte */
+    left: 75%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card15 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card15 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card15:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card15 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card15:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card15 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 227px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card15 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card15 .details .center h1 .role {
+    font-size: 12px;
+    width: 139px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card15 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card15 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card15 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card15 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card15 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card15 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card15 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card15 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card15 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card15 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card16 {
+    position: absolute;
+    top: 3825px;      /* Positionnement Y de la carte */
+    left: 25%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card16 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card16 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card16:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card16 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card16:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card16 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 151px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card16 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card16 .details .center h1 .role {
+    font-size: 12px;
+    width: 139px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card16 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card16 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card16 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card16 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card16 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card16 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card16 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card16 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card16 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card16 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+.card17 {
+    position: absolute;
+    top: 3825px;      /* Positionnement Y de la carte */
+    left: 75%;    /* Positionnement X de la carte */
+    transform: translate(-50%, -50%);   /* Positionnement de la carte */
+    width: 360px;     /* Largeur de la carte */
+    height: 480px;        /* Longueur de la carte */
+    background-color: #080808 ;
+}
+
+.card17 .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card17 .image img {
+  width: 100%;
+  transition: .5s;
+}
+
+.card17:hover .image img {
+  opacity: .4;
+  transform: translateX(30%);
+}
+
+.card17 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-top: solid 2px #00c4ee;
+    border-bottom: solid 2px #00c4ee;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card17:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card17 .details .center h1 {
+    margin: 0;
+    padding: 0;
+    width: 171px;  /* à modifier pour centrer texte à chaque fois*/
+    color: #fff;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.card17 .details .center h1 .pseudo {
+    position: absolute;
+    font-size: 22px;
+    color: #00c4ee;
+    transform: translateX(-50%);
+}
+
+.card17 .details .center h1 .role {
+    font-size: 12px;
+    width: 72px;
+    color: rgb(165, 165, 165);
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.card17 .flag {
+    width: 45px;
+    height: 37px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card17 .age {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card17 .setup {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card17 .setup img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.card17 .setup a {
+    color: #fff;
+    text-decoration: none;
+}
+.card17 .setup a:hover {
+    transition: ease-in .2s;
+    color: #0b9bee;
+
+}
+
+.card17 .details .center .s1-socials {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.card17 .details .center .s1-socials li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card17 .details .center .s1-socials li a {
+    display: block;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card17 .details .center .s1-socials li a:hover {
+    color: #0b9bee;
+}
+
+.card18 {
+  position: absolute;
+  top: 4400px;      /* Positionnement Y de la carte */
+  left: 25%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 360px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+  background-color: #080808 ;
+}
+
+.card18 .image {
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+}
+
+.card18 .image img {
+width: 100%;
+transition: .5s;
+}
+
+.card18:hover .image img {
+opacity: .4;
+transform: translateX(30%);
+}
+
+.card18 .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  border-top: solid 2px #00c4ee;
+  border-bottom: solid 2px #00c4ee;
+  transition: .5s;
+  transform-origin: left;
+  transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card18:hover .details {
+  transform: perspective(2000px) rotateY(0deg);
+}
+.card18 .details .center h1 {
+  margin: 0;
+  padding: 0;
+  width: 215px;  /* à modifier pour centrer texte à chaque fois*/
+  color: #fff;
+  line-height: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}
+
+.card18 .details .center h1 .pseudo {
+  position: absolute;
+  font-size: 22px;
+  color: #00c4ee;
+  transform: translateX(-50%);
+}
+
+.card18 .details .center h1 .role {
+  font-size: 12px;
+  width: 72px;
+  color: rgb(165, 165, 165);
+  position: absolute;
+  left: calc(50%);
+  transform: translateX(-50%);
+}
+
+.card18 .flag {
+  width: 45px;
+  height: 37px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card18 .age {
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card18 .setup {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  list-style: none;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card18 .setup img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.card18 .setup a {
+  color: #fff;
+  text-decoration: none;
+}
+.card18 .setup a:hover {
+  transition: ease-in .2s;
+  color: #0b9bee;
+
+}
+
+.card18 .details .center .s1-socials {
+  margin: 10px auto 0;
+  padding: 0;
+  display: table;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 85%;
+}
+
+.card18 .details .center .s1-socials li {
+  list-style: none;
+  margin: 0 5px;
+  float: left;
+}
+
+.card18 .details .center .s1-socials li a {
+  display: block;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: .5s;
+}
+
+.card18 .details .center .s1-socials li a:hover {
+  color: #0b9bee;
+}
+
+.card19 {
+  position: absolute;
+  top: 4400px;      /* Positionnement Y de la carte */
+  left: 75%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 360px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+  background-color: #080808 ;
+}
+
+.card19 .image {
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+}
+
+.card19 .image img {
+width: 100%;
+transition: .5s;
+}
+
+.card19:hover .image img {
+opacity: .4;
+transform: translateX(30%);
+}
+
+.card19 .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  border-top: solid 2px #00c4ee;
+  border-bottom: solid 2px #00c4ee;
+  transition: .5s;
+  transform-origin: left;
+  transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card19:hover .details {
+  transform: perspective(2000px) rotateY(0deg);
+}
+.card19 .details .center h1 {
+  margin: 0;
+  padding: 0;
+  width: 151px;  /* à modifier pour centrer texte à chaque fois*/
+  color: #fff;
+  line-height: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}
+
+.card19 .details .center h1 .pseudo {
+  position: absolute;
+  font-size: 22px;
+  color: #00c4ee;
+  transform: translateX(-50%);
+}
+
+.card19 .details .center h1 .role {
+  font-size: 12px;
+  width: 54px;  
+  color: rgb(165, 165, 165);
+  position: absolute;
+  left: calc(50%);
+  transform: translateX(-50%);
+}
+
+.card19 .flag {
+  width: 45px;
+  height: 37px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card19 .age {
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card19 .setup {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  list-style: none;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card19 .setup img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.card19 .setup a {
+  color: #fff;
+  text-decoration: none;
+}
+.card19 .setup a:hover {
+  transition: ease-in .2s;
+  color: #0b9bee;
+
+}
+
+.card19 .details .center .s1-socials {
+  margin: 10px auto 0;
+  padding: 0;
+  display: table;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 85%;
+}
+
+.card19 .details .center .s1-socials li {
+  list-style: none;
+  margin: 0 5px;
+  float: left;
+}
+
+.card19 .details .center .s1-socials li a {
+  display: block;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: .5s;
+}
+
+.card19 .details .center .s1-socials li a:hover {
+  color: #0b9bee;
+}
+
+
+@media all and (max-width : 900px) {
+  .s1 {
+    height: 9300px;
+}
+.s1 h1:nth-child(1) {
+  font-size: 20px;
+  width: 186px;
+}
+.s1 h1:nth-child(2) {
+  font-size: 20px;
+  width: 90px;
+  top: 1250px;
+}
+.card1 {
+  top: 375px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card2 {
+  top: 950px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card3 {
+  top: 1525px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card20 {
+  top: 2100px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card4 {
+  top: 2675px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card5 {
+  top: 3250px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card6 {
+  top: 3825px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card10 {
+  top: 4400px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card11{
+  top: 4975px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card13 {
+  top: 5550px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card14 {
+  top: 6125px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card15 {
+  top: 6700px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card16 {
+  top: 7275px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card17 {
+  top: 7850px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card18 {
+  top: 8425px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card19 {
+  top: 9000px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+.card19 {
+  top: 9000px;      /* Positionnement Y de la carte */
+  left: 50%;    /* Positionnement X de la carte */
+  transform: translate(-50%, -50%);   /* Positionnement de la carte */
+  width: 320px;     /* Largeur de la carte */
+  height: 480px;        /* Longueur de la carte */
+}
+}
+
+/* ------------------ S2 ------------------ */
+
+.s2 {
+  height: 550px;
+  position: relative;
+  background-color: #080808;
+}
+
+.s2 h1 {
+ font-size: 30px;
+ position: absolute;
+ top: 25px;
+ left: 50%;
+ transform: translateX(-50%);
+ color: #0c9bdd;
+}
+
+table {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  table-layout: fixed;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+table tr {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+@media all and (min-width : 320px){
+  .s2{
+    height: 500px;
+  }
+  .s2 h1{
+    font-size: 25px;
+  }
+  table{
+    width: 80%;
+  }
+  tbody{
+    font-size: 10px;
+  }
+}
+@media all and (min-width : 600px){
+  .s2{
+    height: 500px;
+  }
+  .s2 h1{
+    font-size: 25px;
+  }
+  table{
+    width: 80%;
+  }
+  tbody{
+    font-size: 16px;
+  }
+}
+@media all and (min-width : 600px){
+    .s2{
+        height: 575px;
+      }
+  table{
+    width: 80%;
+  }
+  tbody{
+    font-size: 20px;
+  }
+}
+
+/* ------------------ Footer ------------------ */
+
+footer {
+  background-color: #000000;
+  border-top: 3px solid #0c9bdd;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+#logo-footer {
+  width: 240px;
+  height: auto;
+  position: relative;
+  left: 50px;
+  top: 25px;
+}
+
+footer p {
+  color: #878888;
+  font-size: 17px;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: absolute;
+  top: 150px;
+  left: 2%;
+}
+
+footer h1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.webtv h1 {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+}
+
+.webtv .fh {
+  position: absolute;
+  top: 60px;
+  left: 400px;
+  font-size: 17px;
+}
+
+.webtv .fwtv {
+  position: absolute;
+  top: 90px;
+  left: 400px;
+  font-size: 17px;
+}
+
+.teams h1 {
+  position: absolute;
+  top: 20px;
+  left: 570px;
+  font-size: 17px;
+}
+
+.teams .ff {
+  position: absolute;
+  top: 60px;
+  left: 570px;
+  font-size: 17px;
+}
+
+.teams .fl {
+  position: absolute;
+  top: 90px;
+  left: 570px;
+  font-size: 17px;
+}
+
+.club h1 {
+  position: absolute;
+  top: 20px;
+  left: 800px;
+}
+
+.club .fn {
+  position: absolute;
+  top: 60px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .fsh {
+  position: absolute;
+  top: 90px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .fst {
+  position: absolute;
+  top: 120px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .fap {
+  position: absolute;
+  top: 150px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.club .frec {
+  position: absolute;
+  top: 180px;
+  left: 800px;
+  font-size: 17px;
+}
+
+.socials h1 {
+  position: absolute;
+  top: 20px;
+  left: 1000px;
+}
+
+.socials .ft {
+  position: absolute;
+  top: 60px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .fd {
+  position: absolute;
+  top: 90px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .fy {
+  position: absolute;
+  top: 120px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .flive {
+  position: absolute;
+  top: 150px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+.socials .fi {
+  position: absolute;
+  top: 180px;
+  left: 1000px;
+  font-size: 17px;
+}
+
+
+footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #878888;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #0c9bdd;
+}
+
+.credits a {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  top: 250px;
+  left: 2%;
+}
+
+.credits a:hover {
+  color: #fff;
+}
+
+.credits i {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+/* ------------------ Footer - Responsive ------------------ */
+
+@media all and (max-width : 1280px) {
+
+  #logo-footer {
+    position: absolute;
+    left: 50px;
+  }
+}
+
+@media all and (max-width : 1225px) {
+
+  footer {
+    height: 900px;
+    z-index: 20;
+  }
+
+  #logo-footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .webtv {
+    position: relative;
+  }
+
+  .webtv h1 {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .webtv .fh {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .webtv .fwtv {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .teams {
+    position: relative;
+  }
+
+  .teams h1 {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .teams .ff {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .teams .fl {
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club {
+    position: relative;
+  }
+
+  .club h1 {
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fn {
+    top: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fsh {
+    top: 390px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fst {
+    top: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .fap {
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .club .frec {
+    top: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials {
+    position: relative;
+  }
+
+  .socials h1 {
+    top: 520px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .ft {
+    top: 560px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .fd {
+    top: 590px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .fy {
+    top: 620px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .flive {
+    top: 650px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socials .fi {
+    top: 680px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  footer p {
+    top: 750px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .credits a {
+    top: 845px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+@media all and (max-width : 550px) {
+  footer {
+    height: 1000px;
+  }
+  footer p {
+    width: 210px;
+    left: 55%;
+  }
+  .credits a {
+    top: 910px;
+  }
+}
